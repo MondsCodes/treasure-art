@@ -50,7 +50,7 @@ To add a new work: drop the image into `source-images/`, add an entry to `WORKS`
 ## Putting it online (GitHub Pages)
 
 1. In the repository on GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**.
-2. Choose the branch with the site on it (`main` once this is merged) and `/ (root)`, then save.
+2. Choose the `main` branch and `/ (root)`, then save.
 3. After a minute the site is live at `https://<your-username>.github.io/treasure-art/`.
 
 If you later use a custom domain, change `og:image` in the three HTML files to the full address (e.g. `https://treasurefatile.com/assets/img/og.jpg`) so link previews on social media show the artwork.
