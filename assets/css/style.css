@@ -1370,8 +1370,13 @@ a.doc-link:hover .arrow {
     grid-column: 1;
     grid-row: auto;
     margin-top: 0;
-    width: min(var(--w-sm, 100%), calc(74svh * var(--ratio)));
-    justify-self: var(--align-sm, start);
+    width: auto;
+    justify-self: stretch;
+  }
+
+  /* On phones the work runs edge to edge; captions keep the page margin. */
+  .flow__item .art-link {
+    margin-inline: calc(-1 * var(--gutter));
   }
 
   .flow-head {
@@ -1413,6 +1418,13 @@ a.doc-link:hover .arrow {
 
   .caption__title {
     font-size: 20px;
+  }
+}
+
+/* Works page: one column on phones, so let the work run edge to edge there too. */
+@media (max-width: 559px) {
+  .card .art-link {
+    margin-inline: calc(-1 * var(--gutter));
   }
 }
 

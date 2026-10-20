@@ -509,7 +509,7 @@
   function renderFlow(container) {
     if (!container) return;
     var offsets = ["16vh", "26vh", "10vh", "20vh"];
-    var row = 0, pairs = 0, i = 0, n = 0;
+    var row = 0, pairs = 0, i = 0;
     var frag = document.createDocumentFragment();
 
     function place(work, col, opts) {
@@ -525,14 +525,11 @@
           "--offset": opts.offset || "0px",
           "--ratio": r.toFixed(4),
           "--justify": opts.justify || "start",
-          "--w-sm": r >= 1 ? "100%" : "84%",
-          "--align-sm": r >= 1 ? "center" : (n % 2 ? "end" : "start"),
         },
       }, [
         artLink(work, { sizes: [[721, Math.round(span / 12 * 100)], [0, r >= 1 ? 94 : 80]] }),
         caption(work),
       ]);
-      n++;
       frag.append(fig);
     }
 
