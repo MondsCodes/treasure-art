@@ -58,6 +58,6 @@ If you later use a custom domain, change `og:image` in the three HTML files to t
 ## Notes
 
 - Images and details come from the "Website Sorting" document. *UAC 1978* was rotated upright to match how it appears in the document.
-- "Eridale Theatre" in the document was corrected to "Erindale Theatre".
+- Group exhibitions on the About page come from the Group Exhibitions section of her CV.
 - Fonts are Cormorant Garamond and DM Sans (SIL Open Font License), stored in `assets/fonts/` so the site never depends on Google. Cormorant covers the Yoruba diacritics in titles like *Ọ̀rẹ́ Ìyàwó*.
 - Motion is slow and gentle. Visitors who switch on "reduce motion" on their device get the same site without the animation.
