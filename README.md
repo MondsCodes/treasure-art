@@ -34,6 +34,8 @@ and open <http://localhost:8000>.
 
 **CV and artist statement:** they currently say "Coming soon". Put the PDFs in `assets/docs/` (or use any link), then in `about.html` replace each `<span class="doc-link doc-link--pending">…</span>` with the link shown in the comment just above it.
 
+**After changing any CSS or JS file:** raise the `?v=` number on the `<link>` and `<script>` lines at the top of the three HTML files (e.g. `?v=3` to `?v=4`). Otherwise phones that visited recently can keep an old copy for a few minutes and show a broken page.
+
 ### Adding or replacing images
 
 Images live in `source-images/`, named after the work's `images` entry in `data.js` (e.g. `wait-and-pray.jpg`). JPG, PNG and WebP all work. After adding or replacing any, rebuild the web versions:

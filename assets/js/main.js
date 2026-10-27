@@ -490,6 +490,7 @@
       s.img.sizes = coverWidth(s.im);
       s.img.srcset = s.im.srcset.map(function (x) { return x[0] + " " + x[1] + "w"; }).join(", ");
       s.img.src = s.im.srcset[Math.min(1, s.im.srcset.length - 1)][0];
+      if (s.img.complete && s.img.naturalWidth) s.el.classList.add("is-loaded");
     }
 
     function warmNext() {

@@ -574,6 +574,11 @@ button {
   transform: scale(1.06);
 }
 
+.landing__next[hidden],
+.landing__peek[hidden] {
+  display: none;
+}
+
 .landing__label:focus-visible,
 .landing__next:focus-visible,
 .landing__peek:focus-visible {
