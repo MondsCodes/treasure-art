@@ -167,5 +167,24 @@ window.WORKS = [
   },
 ];
 
-/* Works that slowly rotate in the frame at the top of the home page. */
-window.HERO = ["iyawo-rere", "the-enlightenment", "daydream-ii", "untitled-305"];
+/*
+  HOME PAGE: one work fills the whole screen; the arrow (or a slow timer) moves to the next.
+    wide   used on laptops and landscape screens, so pick wide works
+    tall   used on phones and portrait screens, so pick tall works
+    focus  which part of the image to keep in view when the screen trims the edges,
+           as "left-right top-bottom", e.g. "50% 10%" keeps the top centre in view
+  The first one in each list is what people see first. One entry = no arrow, just that image.
+*/
+window.HERO = {
+  wide: [
+    { slug: "ore-iyawo", focus: "50% 8%" },
+    { slug: "wait-and-pray", focus: "50% 35%" },
+    { slug: "most-coloured-most-visible", focus: "50% 55%" },
+  ],
+  tall: [
+    { slug: "untitled-305", focus: "50% 40%" },
+    { slug: "the-enlightenment", focus: "30% 50%" },
+    { slug: "untitled-2021", focus: "50% 50%" },
+    { slug: "untitled-2023-digital-i", focus: "50% 40%" },
+  ],
+};

@@ -8,7 +8,7 @@ It is a plain static site (HTML, CSS and a little JavaScript), so there is nothi
 
 | Page | What it shows |
 | --- | --- |
-| `index.html` | Home: her name, a slow rotating frame of works, a line from her statement, then every work laid out like a quiet exhibition wall. |
+| `index.html` | Home: one work fills the screen, with its title and year in the corner. An arrow (or a slow timer, or a swipe on phones) moves to the next. |
 | `works.html` | All works grouped by year (newest first), with filters for **Studio** (paint, fabric, print, paper) and **Digital** (Procreate), and for each year. |
 | `about.html` | Portrait, bio, group exhibitions by year, CV & artist statement, Instagram. |
 
@@ -28,7 +28,7 @@ and open <http://localhost:8000>.
 
 ## Editing
 
-**Artworks:** everything about each work (title, year, medium, size, Studio/Digital) is in [`assets/js/data.js`](assets/js/data.js). The order there is the order on the home page. `HERO` at the bottom picks which works rotate in the frame at the top of the home page. The names "Studio" and "Digital" can be changed in `CATEGORIES`.
+**Artworks:** everything about each work (title, year, medium, size, Studio/Digital) is in [`assets/js/data.js`](assets/js/data.js). `HERO` at the bottom picks the works shown full screen on the home page: `wide` ones for laptops, `tall` ones for phones, each with a `focus` saying which part to keep in view when the screen trims the edges. The names "Studio" and "Digital" can be changed in `CATEGORIES`.
 
 **About text, exhibitions and links:** these are written directly in [`about.html`](about.html).
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="is-landing">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -36,69 +36,21 @@
       </div>
     </header>
 
-    <main id="main">
-      <section class="hero">
-        <div class="wrap">
-          <div class="hero__text">
-            <p class="eyebrow" data-reveal>Visual artist &middot; Toronto</p>
-            <h1 class="hero__name" data-reveal style="--d: 0.08s"><span>Treasure</span><span>Fatile</span></h1>
-            <p class="hero__lede" data-reveal style="--d: 0.18s">
-              Rooted in traditional painting, with explorations in collage, printmaking and textile.
-            </p>
-            <div class="hero__links" data-reveal style="--d: 0.28s">
-              <a class="btn-line btn-line--down" href="#works">See the work <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg></a>
-              <a class="btn-line" href="works.html">Works by year <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
-            </div>
-          </div>
-          <div class="hero__media" data-reveal style="--d: 0.22s">
-            <div class="hero__frame"></div>
-            <p class="hero__caption"></p>
-          </div>
-        </div>
-        <span class="scroll-cue" aria-hidden="true"></span>
-      </section>
-
-      <section class="statement wrap" aria-label="Artist statement">
-        <figure data-reveal>
-          <blockquote>
-            Currently, my works seek to understand how different environments influence
-            <em>the roles women assume</em> and the sacrifices they are compelled to make.
-          </blockquote>
-          <figcaption class="eyebrow">Treasure Fatile</figcaption>
-        </figure>
-      </section>
-
-      <section class="wrap" id="works" aria-labelledby="works-title">
-        <div class="flow-head" data-reveal>
-          <h2 class="section-title" id="works-title">The work</h2>
-          <p class="eyebrow" data-range></p>
-        </div>
-        <div class="flow"></div>
-        <noscript>
-          <p class="page-sub">This gallery needs JavaScript to show the artwork. You can also see Treasure's work on <a href="https://www.instagram.com/insidetreasureshead/">Instagram</a>.</p>
-        </noscript>
-      </section>
-
-      <section class="closing wrap" aria-label="Keep exploring">
-        <div class="closing__links" data-reveal>
-          <a class="big-link" href="works.html">
-            <span><small class="eyebrow">Browse</small>All works, by year</span>
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 18L18 6M8 6h10v10"/></svg>
-          </a>
-          <a class="big-link" href="about.html">
-            <span><small class="eyebrow">Read</small>About Treasure</span>
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 18L18 6M8 6h10v10"/></svg>
-          </a>
-        </div>
-      </section>
+    <main id="main" class="landing">
+      <h1 class="visually-hidden">Treasure Fatile, visual artist, Toronto</h1>
+      <div class="landing__slides"></div>
+      <a class="landing__label" href="works.html">
+        <span class="landing__title">Works</span>
+        <span class="landing__sep" aria-hidden="true">/</span>
+        <span class="landing__year"></span>
+      </a>
+      <button class="landing__next" type="button" aria-label="Next work" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <button class="landing__peek" type="button" hidden><img alt="" /></button>
+      <noscript>
+        <img class="landing__fallback" src="assets/img/art/ore-iyawo-1600.webp" alt="Ọ̀rẹ́ Ìyàwó (Friends of the Bride), 2024" />
+      </noscript>
     </main>
-
-    <footer class="site-footer">
-      <div class="wrap">
-        <span>&copy; <span data-current-year>2026</span> Treasure Fatile</span>
-        <span>Toronto</span>
-        <a href="https://www.instagram.com/insidetreasureshead/" target="_blank" rel="noopener">Instagram &middot; @insidetreasureshead</a>
-      </div>
-    </footer>
   </body>
 </html>
