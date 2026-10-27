@@ -1,6 +1,6 @@
 # Treasure Fatile, art portfolio
 
-A calm, image-first portfolio for [Treasure Fatile](https://www.instagram.com/insidetreasureshead/), a visual artist based in the Greater Toronto Area.
+A calm, image-first portfolio for [Treasure Fatile](https://www.instagram.com/insidetreasureshead/), a visual artist based in Toronto.
 
 It is a plain static site (HTML, CSS and a little JavaScript), so there is nothing to install to view it and it can be hosted for free on GitHub Pages.
 
