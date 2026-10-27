@@ -218,12 +218,12 @@ button {
 }
 
 .nav a:hover,
-.nav a[aria-current="page"] {
+.nav a[aria-current] {
   color: var(--ink);
 }
 
 .nav a:hover::after,
-.nav a[aria-current="page"]::after {
+.nav a[aria-current]::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -852,7 +852,8 @@ button {
   margin: 0;
 }
 
-.about__portrait .art {
+.about__portrait .art,
+.about__portrait .art-link {
   max-width: 520px;
 }
 
@@ -973,12 +974,169 @@ a.doc-link:hover .arrow {
   height: 18px;
 }
 
-.doc-link--pending {
+a.doc-link--internal:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Breadcrumb above a sub-page title, e.g. "About / CV". */
+.crumb a {
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+  transition:
+    color 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+.crumb a:hover {
+  color: var(--ink);
+  border-color: currentColor;
+}
+
+/* Artist statement ---------------------------------------------------------- */
+
+.about__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(46px, 5.6vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin: 18px 0 0;
+}
+
+.prose {
+  margin-top: clamp(28px, 5vh, 48px);
+  max-width: 34em;
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.5vw, 22.5px);
+  line-height: 1.62;
+}
+
+.prose p {
+  margin: 0 0 1.15em;
+}
+
+.prose a {
+  border-bottom: 1px solid var(--line);
+  transition:
+    color 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+.prose a:hover {
+  color: var(--accent);
+  border-color: currentColor;
+}
+
+/* CV ------------------------------------------------------------------------ */
+
+.cv__body {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 24px;
+  padding-bottom: clamp(80px, 14vh, 160px);
+}
+
+.cv-section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 24px;
+  padding-block: clamp(36px, 6vh, 64px);
+  border-top: 1px solid var(--line);
+}
+
+.cv-section > h2 {
+  grid-column: 1 / span 3;
+  align-self: start;
+  position: sticky;
+  top: 28px;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(26px, 2.4vw, 34px);
+  line-height: 1.1;
+  transition: top 0.7s var(--ease-out);
+}
+
+.header-shown .cv-section > h2 {
+  top: calc(var(--header-h) + 24px);
+}
+
+.cv-section > .cv-content,
+.cv-next > .doc-links {
+  grid-column: 4 / span 9;
+}
+
+.cv-sub {
+  margin: 0 0 4px;
+}
+
+.cv-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 32px;
+  align-items: baseline;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.cv-title {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.cv-title--plain {
+  font-style: normal;
+}
+
+.cv-where {
+  display: block;
+  margin-top: 3px;
+  font-size: 14px;
   color: var(--ink-3);
 }
 
-.doc-link--pending .eyebrow {
-  font-size: 11px;
+.cv-date {
+  font-size: 13px;
+  color: var(--ink-3);
+  white-space: nowrap;
+  font-variant-numeric: lining-nums;
+}
+
+.cv-points {
+  grid-column: 1 / -1;
+  margin: 12px 0 2px;
+  padding-left: 1.1em;
+  display: grid;
+  gap: 6px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 70ch;
+}
+
+.cv-points li::marker {
+  color: var(--ink-3);
+}
+
+.cv-note {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: var(--ink-3);
+}
+
+.cv-next {
+  border-top: 0;
+  padding-top: 0;
 }
 
 /* Lightbox ------------------------------------------------------------------ */
@@ -1207,8 +1365,24 @@ a.doc-link:hover .arrow {
     margin-bottom: 56px;
   }
 
-  .about__portrait .art {
+  .about__portrait .art,
+  .about__portrait .art-link {
     max-width: 440px;
+  }
+
+  .cv-section {
+    padding-block: 32px 40px;
+  }
+
+  .cv-section > h2,
+  .cv-section > .cv-content,
+  .cv-next > .doc-links {
+    grid-column: 1 / -1;
+  }
+
+  .cv-section > h2 {
+    position: static;
+    margin-bottom: 8px;
   }
 
   .about__body {
@@ -1342,6 +1516,15 @@ a.doc-link:hover .arrow {
   .ex-year {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .cv-row {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 6px;
+  }
+
+  .cv-title {
+    font-size: 20px;
   }
 
   .caption__title {

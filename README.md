@@ -10,7 +10,9 @@ It is a plain static site (HTML, CSS and a little JavaScript), so there is nothi
 | --- | --- |
 | `index.html` | Home: one work fills the screen, with its title and year in the corner. An arrow (or a slow timer, or a swipe on phones) moves to the next. |
 | `works.html` | All works grouped by year (newest first), with filters for **Studio** (paint, fabric, print, paper) and **Digital** (Procreate), and for each year. |
-| `about.html` | Portrait, bio, group exhibitions by year, CV & artist statement, Instagram. |
+| `about.html` | Portrait, bio, group exhibitions by year, links to the CV and artist statement, Instagram. |
+| `cv.html` | Her CV: education, exhibitions, curatorial projects, awards and work experience. |
+| `statement.html` | Her artist statement, beside *The Enlightenment*. |
 
 Click any artwork to open it full screen with its title, year, medium and size. Use the arrow keys or swipe to move between works, and Esc or the back button to close.
 
@@ -32,9 +34,9 @@ and open <http://localhost:8000>.
 
 **About text, exhibitions and links:** these are written directly in [`about.html`](about.html).
 
-**CV and artist statement:** they currently say "Coming soon". Put the PDFs in `assets/docs/` (or use any link), then in `about.html` replace each `<span class="doc-link doc-link--pending">…</span>` with the link shown in the comment just above it.
+**CV and artist statement:** written directly in [`cv.html`](cv.html) and [`statement.html`](statement.html). The CV page leaves out her phone number and email; add them there if she wants them public.
 
-**After changing any CSS or JS file:** raise the `?v=` number on the `<link>` and `<script>` lines at the top of the three HTML files (e.g. `?v=3` to `?v=4`). Otherwise phones that visited recently can keep an old copy for a few minutes and show a broken page.
+**After changing any CSS or JS file:** raise the `?v=` number on the `<link>` and `<script>` lines at the top of every HTML file (e.g. `?v=4` to `?v=5`). Otherwise phones that visited recently can keep an old copy for a few minutes and show a broken page.
 
 ### Adding or replacing images
 
