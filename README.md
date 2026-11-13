@@ -57,7 +57,7 @@ To add a new work: drop the image into `source-images/`, add an entry to `WORKS`
 2. Choose the `main` branch and `/ (root)`, then save.
 3. After a minute the site is live at `https://<your-username>.github.io/treasure-art/`.
 
-If you later use a custom domain, change `og:image` in the three HTML files to the full address (e.g. `https://treasurefatile.com/assets/img/og.jpg`) so link previews on social media show the artwork.
+The site lives at <https://treasurefatile.com> (set by the `CNAME` file; DNS is at Namecheap). The `og:image` link-preview addresses in the HTML files use that full address.
 
 ## Notes
 
